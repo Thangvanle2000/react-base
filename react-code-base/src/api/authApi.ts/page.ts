@@ -1,21 +1,22 @@
-import axios, { AxiosResponse } from "axios";
+"use client";
+import { AxiosResponse } from "axios";
 import axiosClient from "../axiosClient";
 
 export const authApi: any = {
   async login(data: any): Promise<AxiosResponse<any>> {
-    const url: string = "/auth/login";
+    const url: string = "/users/login";
     return axiosClient.post(url, data);
   },
   async register(data: any): Promise<AxiosResponse<any>> {
-    const url: string = `auth/register`;
+    const url: string = `/users`;
     return axiosClient.post(url, data);
   },
   async logout(params: any): Promise<AxiosResponse<any>> {
     const url: string = `/auth/logout${params ?? ""}`;
     return axiosClient.post(url);
   },
-  async getUsers(): Promise<AxiosResponse<any>> {
-    const url: string = `/users`;
-    return axios.get(url);
+  async profile(): Promise<AxiosResponse<any>> {
+    const url: string = `/auth/profile`;
+    return axiosClient.get(url);
   },
 };

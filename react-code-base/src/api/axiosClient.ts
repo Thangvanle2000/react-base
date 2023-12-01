@@ -1,11 +1,14 @@
+"use client";
 import axios, {
   AxiosInstance,
   AxiosResponse,
   InternalAxiosRequestConfig,
 } from "axios";
 
+const apiEndpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
+
 const axiosClient: AxiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_API_ENDPOINT,
+  baseURL: apiEndpoint,
   headers: {
     "content-type": "application/json",
   },
