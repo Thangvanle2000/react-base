@@ -1,0 +1,19 @@
+@use "sass:math";
+
+@mixin mq_min_450 {
+  @media screen and (min-width: 450px) {
+    @content;
+  }
+}
+
+@mixin mq_min_750 {
+  @media screen and (min-width: 750px) {
+    @content;
+  }
+}
+
+@mixin mq_min_1024 {
+  @media #{$mq_min_1024} {
+    @content;
+  }
+}

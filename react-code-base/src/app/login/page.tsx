@@ -17,8 +17,6 @@ export default function User() {
     const res: any = await authApi.login({
       user: user,
     });
-    console.log(res);
-    console.log(location);
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -27,6 +25,7 @@ export default function User() {
 
   return (
     <div>
+      <h1 className="hello">Login form</h1>
       <Form
         name="basic"
         labelCol={{ span: 8 }}

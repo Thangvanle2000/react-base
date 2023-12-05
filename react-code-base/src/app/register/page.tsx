@@ -16,10 +16,7 @@ export default function User() {
     };
     try {
       const res: any = await authApi.register({ user: user });
-      console.log(res);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   const onFinishFailed = (errorInfo: any) => {
