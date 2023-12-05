@@ -1,6 +1,5 @@
-// import "./globals.css";
+import StyledComponentsRegistry from "@/lib/AntdRegistry";
 import { Providers } from "./redux/provider";
-import StyledComponentsRegistry from "../lib/AntdRegistry";
 import "../assets/styles/style.scss";
 export const metadata = {
   title: "React base app",
