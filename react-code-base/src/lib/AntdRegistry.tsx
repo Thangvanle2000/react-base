@@ -9,6 +9,7 @@ const StyledComponentsRegistry = ({ children }: React.PropsWithChildren) => {
   const isServerInserted = React.useRef<boolean>(false);
   useServerInsertedHTML(() => {
     // avoid duplicate css insert
+    //
     if (isServerInserted.current) {
       return;
     }
