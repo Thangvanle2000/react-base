@@ -1,0 +1,1 @@
+export const Constant ={ DEFAULT_STATUS :200}
